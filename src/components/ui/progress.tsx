@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as ProgressPrimitive from "@radix-ui/react-progress";
-
 import { cn } from "@/lib/utils";
 
 const Progress = React.forwardRef<
@@ -13,15 +12,15 @@ const Progress = React.forwardRef<
     {...props}
   >
     <ProgressPrimitive.Indicator
-  className="h-full w-full flex-1 transition-all"
-  style={{
-    transform: `translateX(-${100 - (value || 0)}%)`,
-    backgroundColor: "#f47014", // 🔥 ta nouvelle couleur ici
-  }}
-/>
-
+      className="h-full w-full flex-1 transition-all"
+      style={{
+        transform: `translateX(-${100 - (value || 0)}%)`,
+        backgroundColor: "#f47014 !important", // 🔥 force la couleur orange Axiiz
+      }}
+    />
   </ProgressPrimitive.Root>
 ));
+
 Progress.displayName = ProgressPrimitive.Root.displayName;
 
 export { Progress };
