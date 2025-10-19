@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import { TrendingUp, Check, Clock } from "lucide-react";
+import { videoContent } from "@/data/content";
 
 export const ResultSection = () => {
   const [showStats, setShowStats] = useState(false);
   const [conversions, setConversions] = useState(0);
   const [appointments, setAppointments] = useState(0);
+
+  const targetConversions = videoContent.result.stats[0].value;
+  const targetAppointments = videoContent.result.stats[2].value;
 
   useEffect(() => {
     const statsTimer = setTimeout(() => setShowStats(true), 500);
@@ -13,9 +17,9 @@ export const ResultSection = () => {
     if (showStats) {
       const conversionInterval = setInterval(() => {
         setConversions((prev) => {
-          if (prev >= 35) {
+          if (prev >= targetConversions) {
             clearInterval(conversionInterval);
-            return 35;
+            return targetConversions;
           }
           return prev + 1;
         });
@@ -23,9 +27,9 @@ export const ResultSection = () => {
 
       const appointmentInterval = setInterval(() => {
         setAppointments((prev) => {
-          if (prev >= 100) {
+          if (prev >= targetAppointments) {
             clearInterval(appointmentInterval);
-            return 100;
+            return targetAppointments;
           }
           return prev + 2;
         });
@@ -38,7 +42,7 @@ export const ResultSection = () => {
     }
 
     return () => clearTimeout(statsTimer);
-  }, [showStats]);
+  }, [showStats, targetConversions, targetAppointments]);
 
   return (
     <div className="relative w-full h-full bg-gradient-to-br from-primary to-secondary flex flex-col items-center justify-center p-8">
@@ -50,7 +54,7 @@ export const ResultSection = () => {
       {showStats && (
         <div className="relative z-10 space-y-8 w-full animate-fade-in">
           {/* Title */}
-          <h2 className="text-white text-3xl font-bold text-center mb-8">Résultats Garantis</h2>
+          <h2 className="text-white text-3xl font-bold text-center mb-8">{videoContent.result.title}</h2>
 
           {/* Stats Cards */}
           <div className="space-y-6">
@@ -58,27 +62,27 @@ export const ResultSection = () => {
             <div className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-2xl animate-counter">
               <div className="flex items-center justify-between mb-2">
                 <TrendingUp className="w-8 h-8 text-primary" />
-                <span className="text-5xl font-bold text-primary">{conversions}%</span>
+                <span className="text-5xl font-bold text-primary">{videoContent.result.stats[0].prefix}{conversions}{videoContent.result.stats[0].suffix}</span>
               </div>
-              <p className="text-gray-700 font-semibold text-lg">de conversions en plus</p>
+              <p className="text-gray-700 font-semibold text-lg">{videoContent.result.stats[0].label}</p>
             </div>
 
             {/* Zero Leads Lost */}
             <div className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-2xl animate-counter delay-100">
               <div className="flex items-center justify-between mb-2">
                 <Check className="w-8 h-8 text-primary" />
-                <span className="text-5xl font-bold text-primary">0</span>
+                <span className="text-5xl font-bold text-primary">{videoContent.result.stats[1].value}</span>
               </div>
-              <p className="text-gray-700 font-semibold text-lg">lead perdu</p>
+              <p className="text-gray-700 font-semibold text-lg">{videoContent.result.stats[1].label}</p>
             </div>
 
             {/* Automated Appointments */}
             <div className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-2xl animate-counter delay-200">
               <div className="flex items-center justify-between mb-2">
                 <Clock className="w-8 h-8 text-primary" />
-                <span className="text-5xl font-bold text-primary">{appointments}%</span>
+                <span className="text-5xl font-bold text-primary">{videoContent.result.stats[2].prefix}{appointments}{videoContent.result.stats[2].suffix}</span>
               </div>
-              <p className="text-gray-700 font-semibold text-lg">rendez-vous automatiques</p>
+              <p className="text-gray-700 font-semibold text-lg">{videoContent.result.stats[2].label}</p>
             </div>
           </div>
         </div>

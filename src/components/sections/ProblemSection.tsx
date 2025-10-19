@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { MessageCircle, PhoneCall, Mail, AlertCircle } from "lucide-react";
+import { videoContent } from "@/data/content";
 
 export const ProblemSection = () => {
   const [showIcon, setShowIcon] = useState(false);
@@ -59,10 +60,10 @@ export const ProblemSection = () => {
       {showText && (
         <div className="animate-slide-up">
           <p className="text-gray-800 text-xl font-semibold text-center leading-tight mb-4">
-            Les courtiers dépensent des centaines d'euros en pub…
+            {videoContent.problem.subtitle.split('…')[0]}…
           </p>
           <p className="text-red-600 text-2xl font-bold text-center leading-tight">
-            mais perdent leurs leads faute de suivi rapide.
+            {videoContent.problem.subtitle.split('…')[1]}
           </p>
         </div>
       )}

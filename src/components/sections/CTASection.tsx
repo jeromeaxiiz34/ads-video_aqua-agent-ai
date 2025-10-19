@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Rocket, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { videoContent } from "@/data/content";
+import logoAxiiz from "@/assets/logo-axiiz.png";
 
 export const CTASection = () => {
   const [showContent, setShowContent] = useState(false);
@@ -20,19 +22,17 @@ export const CTASection = () => {
 
       {showContent && (
         <div className="relative z-10 text-center space-y-8 animate-fade-in">
-          {/* Icon */}
+          {/* Logo */}
           <div className="flex justify-center mb-4">
-            <div className="bg-white/20 backdrop-blur-sm p-6 rounded-full animate-pulse-notification">
-              <Rocket className="w-16 h-16 text-white" />
-            </div>
+            <img src={logoAxiiz} alt="Axiiz Logo" className="h-16 w-auto animate-fade-in" />
           </div>
 
           {/* Main CTA Text */}
           <div className="space-y-4">
             <h2 className="text-white text-3xl font-bold leading-tight">
-              Découvrez comment automatiser vos leads
+              {videoContent.cta.title}
             </h2>
-            <p className="text-white/90 text-xl font-medium">dès aujourd'hui</p>
+            <p className="text-white/90 text-xl font-medium">{videoContent.cta.subtitle}</p>
           </div>
 
           {/* CTA Button */}
@@ -42,7 +42,7 @@ export const CTASection = () => {
               className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-8 py-6 rounded-full shadow-2xl group transition-all duration-300 hover:scale-105"
             >
               <Rocket className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
-              Réservez une démo gratuite
+              {videoContent.cta.buttonText}
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
@@ -50,7 +50,7 @@ export const CTASection = () => {
           {/* Small Badge */}
           <div className="pt-6">
             <div className="inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full">
-              <p className="text-white text-sm font-medium">✨ Sans engagement • Réponse sous 24h</p>
+              <p className="text-white text-sm font-medium">{videoContent.cta.badge}</p>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
+import { videoContent } from "@/data/content";
 
 export const HookSection = () => {
   const [showNotification, setShowNotification] = useState(false);
@@ -39,8 +40,7 @@ export const HookSection = () => {
       {showText && (
         <div className="mt-48 animate-fade-in">
           <h1 className="text-white text-2xl font-bold text-center leading-tight px-4">
-            Et si chaque prospect qui clique sur vos pubs d'assurance recevait une réponse
-            immédiate sur WhatsApp ?
+            {videoContent.hook.title}
           </h1>
         </div>
       )}
