@@ -60,7 +60,7 @@ export const VideoPresentation = () => {
         </div>
 
         {/* Current Section */}
-        <div className="w-full h-full">
+        <div className="w-full h-full overflow-y-auto">
           <CurrentComponent />
         </div>
 
