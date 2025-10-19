@@ -92,3 +92,15 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Force la couleur de l’indicateur de progression partout */
+.progress-indicator-axiiz {
+  background-color: #f47014 !important;
+}
+
+/* (Optionnel) Radix applique parfois des data-state :
+   on couvre aussi ces cas, au besoin */
+[role="progressbar"] .progress-indicator-axiiz {
+  background-color: #f47014 !important;
+}
+
