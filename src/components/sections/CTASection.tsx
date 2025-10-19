@@ -1,0 +1,60 @@
+import { useEffect, useState } from "react";
+import { Rocket, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export const CTASection = () => {
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowContent(true), 300);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="relative w-full h-full bg-gradient-to-br from-primary via-secondary to-primary flex flex-col items-center justify-center p-8">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-bounce-subtle" />
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-bounce-subtle delay-500" />
+      </div>
+
+      {showContent && (
+        <div className="relative z-10 text-center space-y-8 animate-fade-in">
+          {/* Icon */}
+          <div className="flex justify-center mb-4">
+            <div className="bg-white/20 backdrop-blur-sm p-6 rounded-full animate-pulse-notification">
+              <Rocket className="w-16 h-16 text-white" />
+            </div>
+          </div>
+
+          {/* Main CTA Text */}
+          <div className="space-y-4">
+            <h2 className="text-white text-3xl font-bold leading-tight">
+              Découvrez comment automatiser vos leads
+            </h2>
+            <p className="text-white/90 text-xl font-medium">dès aujourd'hui</p>
+          </div>
+
+          {/* CTA Button */}
+          <div className="pt-4 animate-bounce-subtle">
+            <Button
+              size="lg"
+              className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-8 py-6 rounded-full shadow-2xl group transition-all duration-300 hover:scale-105"
+            >
+              <Rocket className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+              Réservez une démo gratuite
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
+
+          {/* Small Badge */}
+          <div className="pt-6">
+            <div className="inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full">
+              <p className="text-white text-sm font-medium">✨ Sans engagement • Réponse sous 24h</p>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
