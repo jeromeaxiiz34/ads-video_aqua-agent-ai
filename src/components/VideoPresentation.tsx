@@ -17,21 +17,29 @@ export const VideoPresentation = () => {
     { component: CTASection, duration: 4000 }, // 37-40s
   ];
 
+  const totalDuration = sections.reduce((sum, section) => sum + section.duration, 0);
+
   useEffect(() => {
-    const totalDuration = sections[currentSection].duration;
+    const sectionDuration = sections[currentSection].duration;
     const interval = 50; // Update every 50ms for smooth progress
     let elapsed = 0;
 
     const progressTimer = setInterval(() => {
       elapsed += interval;
-      const progressPercent = (elapsed / totalDuration) * 100;
+      
+      // Calculate elapsed time from all previous sections
+      const previousDuration = sections
+        .slice(0, currentSection)
+        .reduce((sum, section) => sum + section.duration, 0);
+      
+      const totalElapsed = previousDuration + elapsed;
+      const progressPercent = (totalElapsed / totalDuration) * 100;
       setProgress(progressPercent);
 
-      if (elapsed >= totalDuration) {
+      if (elapsed >= sectionDuration) {
         clearInterval(progressTimer);
         if (currentSection < sections.length - 1) {
           setCurrentSection(currentSection + 1);
-          setProgress(0);
         } else {
           // Video finished, restart
           setTimeout(() => {
