@@ -8,17 +8,18 @@ const Progress = React.forwardRef<
 >(({ className, value, ...props }, ref) => (
   <ProgressPrimitive.Root
     ref={ref}
-    className={cn("relative h-4 w-full overflow-hidden rounded-full bg-secondary", className)}
+    className={cn(
+      "relative h-4 w-full overflow-hidden rounded-full bg-secondary", // la piste
+      className
+    )}
     {...props}
   >
     <ProgressPrimitive.Indicator
-      className="h-full w-full flex-1 transition-all"
+      // on enlève toute classe de couleur qui pourrait écraser
+      className="h-full w-full flex-1 transition-all progress-indicator-axiiz"
       style={{
         transform: `translateX(-${100 - (value || 0)}%)`,
-        background: "#f47014", // 🟧 ta couleur orange Axiiz
-        boxShadow: "0 0 8px #f47014", // glow léger
-        WebkitMaskImage:
-          "linear-gradient(to right, rgba(0,0,0,1) 60%, rgba(0,0,0,0.2) 100%)",
+        backgroundColor: "#f47014", // couleur cible
       }}
     />
   </ProgressPrimitive.Root>
