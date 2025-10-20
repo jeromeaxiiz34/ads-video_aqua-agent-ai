@@ -20,7 +20,7 @@ export const videoContent = {
       status: "En ligne"
     },
     conversation: [
-      { id: 1, text: "Bonjour, je souhaite une assurance auto", isBot: false, delay: 500 },
+      { id: 1, text: "Bonjour, je souhaite une assurance moto", isBot: false, delay: 500 },
       { id: 2, text: "Bonjour ! Je peux vous aider immédiatement. Quel type de véhicule ?", isBot: true, delay: 2000 },
       { id: 3, text: "Une Renault Clio essence", isBot: false, delay: 3500 },
       { id: 4, text: "Parfait ! Je propose un rendez-vous demain 14h avec un conseiller ?", isBot: true, delay: 5000 },
