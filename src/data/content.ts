@@ -35,8 +35,6 @@ conversation: [
   { id: 11, text: "Parfait, je vous confirme le rendez-vous. Vous recevrez un rappel automatique avant l’appel.", isBot: true, delay: 11600 },
   { id: 12, text: "Très bien, merci et à demain.", isBot: false, delay: 12600 }
 ],
-
-],
     features: [
       { icon: "Zap", text: "Réponse immédiate ⚡", color: "primary" },
       { icon: "Bot", text: "Leads qualifiés automatiquement 🤖", color: "secondary" },
