@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Check, Zap, Bot, Calendar } from "lucide-react";
 import { videoContent } from "@/data/content";
-import logoFull from "@/assets/logo_axiiz_full.png";
+import logoNoir from "@/assets/logo_orange_noir.png";
 
 export const SolutionSection = () => {
   const [messages, setMessages] = useState<Array<{ id: number; text: string; isBot: boolean }>>([]);
@@ -37,7 +37,7 @@ export const SolutionSection = () => {
     <div className="relative w-full h-full bg-whatsapp-lightGreen flex flex-col items-center justify-center p-6">
       {/* Logo */}
       <div className="absolute top-6 left-1/2 -translate-x-1/2">
-        <img src={logoFull} alt="Axiiz" className="h-8 w-auto" />
+        <img src={logoNoir} alt="Axiiz" className="h-8 w-auto" />
       </div>
 
       {/* WhatsApp Chat Mockup */}
