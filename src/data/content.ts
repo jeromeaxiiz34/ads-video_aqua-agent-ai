@@ -1,17 +1,17 @@
 export const videoContent = {
   hook: {
-    title: "Et si chaque lead WhatsApp recevait une réponse immédiate, même quand vous êtes en rendez-vous ?"
+    title: "💬 Et si chaque prospect recevait une réponse instantanée sur WhatsApp ?"
   },
 
   problem: {
-    title: "Le problème des courtiers",
-    subtitle: "Vous dépensez du budget pub ou payez des apporteurs de leads… mais beaucoup de prospects partent chez un concurrent faute de réponse rapide.",
+    title: "Le vrai problème des courtiers",
+    subtitle: "Trop de leads. Pas assez de temps. Et des ventes qui s’envolent.",
     stats: [
-      { value: "500€", label: "Budget pub mensuel moyen" },
-      { value: "1 sur 3", label: "Leads perdus sans réponse" },
-      { value: "72h", label: "Délai moyen avant premier contact" }
+      { value: "500€", label: "de pub dépensés / mois" },
+      { value: "1/3", label: "des leads perdus" },
+      { value: "72h", label: "pour répondre parfois..." }
     ],
-    notification: "Nouveau lead WhatsApp : 'Bonjour, j’ai une demande de prêt immobilier'"
+    notification: "Nouveau message : 'Bonjour, je cherche un prêt immo 👋'"
   },
 
   solution: {
@@ -20,33 +20,34 @@ export const videoContent = {
       status: "En ligne"
     },
     conversation: [
-      { id: 1, text: "Bonjour, j’aimerais connaître les taux pour un prêt immobilier.", isBot: false, delay: 500 },
-      { id: 2, text: "Bonjour 👋 Je peux vous aider tout de suite. Pouvez-vous me dire si vous êtes en CDI ou indépendant ?", isBot: true, delay: 2000 },
-      { id: 3, text: "Je suis en CDI depuis 3 ans.", isBot: false, delay: 3500 },
-      { id: 4, text: "Parfait ! Votre dossier est éligible. Je propose un rendez-vous demain à 10h avec un conseiller ?", isBot: true, delay: 5000 },
-      { id: 5, text: "Oui, parfait !", isBot: false, delay: 6500 }
+      { id: 1, text: "Bonjour, je cherche un prêt immobilier 👋", isBot: false, delay: 500 },
+      { id: 2, text: "Bonjour ! Je peux vous aider tout de suite ⚡", isBot: true, delay: 1800 },
+      { id: 3, text: "Vous êtes en CDI ou indépendant ?", isBot: true, delay: 2600 },
+      { id: 4, text: "CDI depuis 3 ans ✅", isBot: false, delay: 3600 },
+      { id: 5, text: "Parfait ! Je vous propose un RDV demain à 10h ☕", isBot: true, delay: 4800 },
+      { id: 6, text: "Top, merci !", isBot: false, delay: 5800 }
     ],
     features: [
-      { icon: "Zap", text: "Réponses automatiques 24/7 ⚡", color: "primary" },
-      { icon: "Bot", text: "Qualification instantanée des leads 🤖", color: "secondary" },
-      { icon: "Calendar", text: "Rendez-vous planifiés automatiquement 📅", color: "primary" }
+      { icon: "Zap", text: "Réponse immédiate ⚡", color: "primary" },
+      { icon: "Bot", text: "Leads qualifiés automatiquement 🤖", color: "secondary" },
+      { icon: "Calendar", text: "RDV pris 24/7 📅", color: "primary" }
     ]
   },
 
   result: {
-    title: "Des résultats concrets pour les courtiers",
-    subtitle: "dès la première semaine d’utilisation",
+    title: "Résultats 🔥",
+    subtitle: "Plus de réponses. Plus de dossiers signés.",
     stats: [
-      { value: 40, label: "de conversions en plus", prefix: "+", suffix: "%" },
+      { value: 40, label: "de conversions", prefix: "+", suffix: "%" },
       { value: 0, label: "lead perdu", prefix: "", suffix: "" },
-      { value: 10, label: "heures gagnées par semaine", prefix: "+", suffix: "h" }
+      { value: 10, label: "heures gagnées / semaine", prefix: "+", suffix: "h" }
     ]
   },
 
   cta: {
-    title: "Automatisez vos leads WhatsApp",
-    subtitle: "et concentrez-vous sur les dossiers qui comptent",
-    buttonText: "Réservez une démo gratuite",
-    badge: "✨ Sans engagement • Installation en 10 minutes"
+    title: "Votre agent IA WhatsApp travaille pour vous 🧠",
+    subtitle: "Répond. Qualifie. Relance. 24/7.",
+    buttonText: "🚀 Réservez votre démo gratuite",
+    badge: "Sans engagement • Installation en 10 min"
   }
 };
