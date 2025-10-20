@@ -47,6 +47,7 @@ All colors MUST be HSL.
     --whatsapp-light-green: 142 70% 96%;
     --whatsapp-dark: 0 0% 13%;
     --whatsapp-gray: 0 0% 90%;
+    --axiiz-orange: 24 95% 51%;
     
     --gradient-hero: linear-gradient(135deg, hsl(142 70% 49%), hsl(174 80% 45%));
     --shadow-whatsapp: 0 4px 20px hsla(142, 70%, 49%, 0.3);

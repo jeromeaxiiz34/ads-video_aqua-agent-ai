@@ -62,7 +62,7 @@ export const VideoPresentation = () => {
         {/* Progress Bar */}
         <div className="absolute top-0 left-0 w-full h-1 bg-whatsapp-gray/30 z-50">
           <div
-            className="h-full bg-primary transition-all duration-100 ease-linear"
+            className="h-full bg-[hsl(var(--axiiz-orange))] transition-all duration-100 ease-linear"
             style={{ width: `${progress}%` }}
           />
         </div>
