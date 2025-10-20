@@ -28,7 +28,7 @@ export const CTASection = () => {
           </div>
 
           {/* Main CTA Text */}
-          <div className="space-y-4">
+          <div className="space-y-4 mt-8">
             <h2 className="text-white text-3xl font-bold leading-tight">
               {videoContent.cta.title}
             </h2>

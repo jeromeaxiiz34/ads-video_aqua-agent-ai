@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { MessageCircle, PhoneCall, Mail, AlertCircle } from "lucide-react";
 import { videoContent } from "@/data/content";
-import favicon from "@/assets/favicone_orange.png";
+import logoFull from "@/assets/logo_axiiz_full.png";
 
 export const ProblemSection = () => {
   const [showIcon, setShowIcon] = useState(false);
@@ -23,8 +23,8 @@ export const ProblemSection = () => {
   return (
     <div className="relative w-full h-full bg-gradient-to-br from-red-50 to-orange-50 flex flex-col items-center justify-center p-8">
       {/* Logo */}
-      <div className="absolute top-6 right-6">
-        <img src={favicon} alt="Axiiz" className="h-10 w-10" />
+      <div className="absolute top-6 left-1/2 -translate-x-1/2">
+        <img src={logoFull} alt="Axiiz" className="h-8 w-auto" />
       </div>
 
       {/* Overwhelmed Broker Visual */}

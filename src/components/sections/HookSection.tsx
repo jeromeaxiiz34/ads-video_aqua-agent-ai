@@ -28,7 +28,7 @@ export const HookSection = () => {
 
       {/* WhatsApp Notification Icon */}
       {showNotification && (
-        <div className="absolute top-20 animate-pulse-notification">
+        <div className="absolute top-32 animate-pulse-notification">
           <div className="relative">
             <div className="absolute inset-0 bg-white rounded-full blur-xl opacity-50" />
             <div className="relative bg-white p-6 rounded-full shadow-2xl">
