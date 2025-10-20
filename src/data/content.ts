@@ -20,8 +20,6 @@ export const videoContent = {
       status: "En ligne"
     },
     conversation: [
-
-conversation: [
   { id: 1, text: "Bonjour, je cherche un prêt immobilier.", isBot: false, delay: 500 },
   { id: 2, text: "Bonjour, je peux vous aider. Vous achetez une résidence principale ou un investissement locatif ?", isBot: true, delay: 1800 },
   { id: 3, text: "Résidence principale.", isBot: false, delay: 3600 },
