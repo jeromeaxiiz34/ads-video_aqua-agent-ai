@@ -35,10 +35,12 @@ export const SolutionSection = () => {
 
   return (
     <div className="relative w-full h-full bg-whatsapp-lightGreen flex flex-col items-center justify-center p-6">
-      {/* Logo */}
-      <div className="absolute top-6 left-1/2 -translate-x-1/2">
-        <img src={logoNoir} alt="Axiiz" className="h-8 w-auto" />
-      </div>
+      {/* Logo - hide when features show */}
+      {!showFeatures && (
+        <div className="absolute top-6 left-1/2 -translate-x-1/2">
+          <img src={logoNoir} alt="Axiiz" className="h-8 w-auto" />
+        </div>
+      )}
 
       {/* WhatsApp Chat Mockup */}
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-[320px] overflow-hidden mb-6">
