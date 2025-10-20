@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Check, Zap, Bot, Calendar } from "lucide-react";
 import { videoContent } from "@/data/content";
+import favicon from "@/assets/favicone_orange.png";
 
 export const SolutionSection = () => {
   const [messages, setMessages] = useState<Array<{ id: number; text: string; isBot: boolean }>>([]);
@@ -34,6 +35,11 @@ export const SolutionSection = () => {
 
   return (
     <div className="relative w-full h-full bg-whatsapp-lightGreen flex flex-col items-center justify-center p-6">
+      {/* Logo */}
+      <div className="absolute top-6 left-6">
+        <img src={favicon} alt="Axiiz" className="h-10 w-10" />
+      </div>
+
       {/* WhatsApp Chat Mockup */}
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-[320px] overflow-hidden mb-6">
         {/* WhatsApp Header */}

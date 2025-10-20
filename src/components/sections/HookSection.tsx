@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { videoContent } from "@/data/content";
+import logoFull from "@/assets/logo_axiiz_full.png";
 
 export const HookSection = () => {
   const [showNotification, setShowNotification] = useState(false);
@@ -20,6 +21,11 @@ export const HookSection = () => {
 
   return (
     <div className="relative w-full h-full bg-gradient-to-br from-primary to-secondary flex flex-col items-center justify-center p-8">
+      {/* Logo */}
+      <div className="absolute top-6 left-1/2 -translate-x-1/2">
+        <img src={logoFull} alt="Axiiz" className="h-8 w-auto" />
+      </div>
+
       {/* WhatsApp Notification Icon */}
       {showNotification && (
         <div className="absolute top-20 animate-pulse-notification">

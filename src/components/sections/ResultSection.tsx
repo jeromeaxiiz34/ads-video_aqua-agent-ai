@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { TrendingUp, Check, Clock } from "lucide-react";
 import { videoContent } from "@/data/content";
+import logoFull from "@/assets/logo_axiiz_full.png";
 
 export const ResultSection = () => {
   const [showStats, setShowStats] = useState(false);
@@ -46,6 +47,11 @@ export const ResultSection = () => {
 
   return (
     <div className="relative w-full h-full bg-gradient-to-br from-primary to-secondary flex flex-col items-center justify-center p-8">
+      {/* Logo */}
+      <div className="absolute top-6 left-1/2 -translate-x-1/2">
+        <img src={logoFull} alt="Axiiz" className="h-8 w-auto" />
+      </div>
+
       {/* Glowing WhatsApp Icon Background */}
       <div className="absolute inset-0 flex items-center justify-center opacity-10">
         <div className="w-64 h-64 bg-white rounded-full blur-3xl" />

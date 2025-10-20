@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Rocket, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { videoContent } from "@/data/content";
-import logoAxiiz from "@/assets/logo-axiiz.png";
+import logoFull from "@/assets/logo_axiiz_full.png";
 
 export const CTASection = () => {
   const [showContent, setShowContent] = useState(false);
@@ -24,7 +24,7 @@ export const CTASection = () => {
         <div className="relative z-10 text-center space-y-8 animate-fade-in">
           {/* Logo */}
           <div className="flex justify-center mb-4">
-            <img src={logoAxiiz} alt="Axiiz Logo" className="h-16 w-auto animate-fade-in" />
+            <img src={logoFull} alt="Axiiz Logo" className="h-16 w-auto animate-fade-in" />
           </div>
 
           {/* Main CTA Text */}
