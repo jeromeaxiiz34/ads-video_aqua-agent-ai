@@ -59,7 +59,7 @@ export const ResultSection = () => {
       </div>
 
       {showStats && (
-        <div className="relative z-10 space-y-8 w-full animate-fade-in">
+        <div className="relative z-10 space-y-8 w-full animate-fade-in mt-16">
           {/* Title */}
           <h2 className="text-white text-3xl font-bold text-center mb-8">{videoContent.result.title}</h2>
 
