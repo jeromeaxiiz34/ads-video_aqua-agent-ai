@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { TrendingUp, Check, Clock } from "lucide-react";
 import { videoContent } from "@/data/content";
-import logoFull from "@/assets/logo_axiiz_full.png";
+
 
 export const ResultSection = () => {
   const [showStats, setShowStats] = useState(false);
