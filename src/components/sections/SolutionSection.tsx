@@ -17,6 +17,10 @@ export const SolutionSection = () => {
   }, [messages]);
 
   useEffect(() => {
+    // Reset messages and features on mount
+    setMessages([]);
+    setShowFeatures(false);
+    
     const conversation = videoContent.solution.conversation;
 
     const timers = conversation.map((msg) =>
