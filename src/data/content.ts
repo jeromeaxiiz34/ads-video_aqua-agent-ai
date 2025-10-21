@@ -31,7 +31,7 @@ export const videoContent = {
       { id: 9, text: "https://calendly.com/30min", isBot: true, delay: 9200 },
       { id: 10, text: "Merci, je viens de réserver pour demain matin.", isBot: false, delay: 10400 },
       { id: 11, text: "Parfait ✅ Rendez-vous confirmé. Vous recevrez un rappel automatique avant l’appel.", isBot: true, delay: 11600 },
-      { id: 12, text: "Merci et à demain.", isBot: false, delay: 12600 }
+      { id: 12, text: "Merci et à demain.", isBot: false, delay: 14000 }
     ],
     features: [
       { icon: "Zap", text: "Réponse instantanée ⚡", color: "primary" },
