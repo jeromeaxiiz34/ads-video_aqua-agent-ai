@@ -24,12 +24,12 @@ export const CTASection = () => {
         <div className="relative z-10 text-center space-y-8 animate-fade-in">
           {/* Logo */}
           <div className="flex justify-center mb-4">
-            <img src={logoFull} alt="Axiiz Logo" className="h-16 w-auto animate-fade-in" />
+            <img src={logoFull} alt="Axiiz Logo" className="h-10 w-auto animate-fade-in" />
           </div>
 
           {/* Main CTA Text */}
           <div className="space-y-4">
-            <h2 className="text-white text-3xl font-bold leading-tight">
+            <h2 className="text-white text-2xl font-bold leading-tight px-4">
               {videoContent.cta.title}
             </h2>
             <p className="text-white/90 text-xl font-medium">{videoContent.cta.subtitle}</p>
@@ -38,12 +38,12 @@ export const CTASection = () => {
           {/* CTA Button */}
           <div className="pt-4 animate-bounce-subtle">
             <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-8 py-6 rounded-full shadow-2xl group transition-all duration-300 hover:scale-105"
+              size="default"
+              className="bg-[#f47014] hover:bg-[#d96012] text-white font-bold text-base px-6 py-5 rounded-full shadow-2xl group transition-all duration-300 hover:scale-105"
             >
-              <Rocket className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+              <Rocket className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform" />
               {videoContent.cta.buttonText}
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
 

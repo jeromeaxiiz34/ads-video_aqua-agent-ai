@@ -64,9 +64,8 @@ export const ProblemSection = () => {
 {/* Problem Text */}
 {showText && (
   <div className="animate-slide-up">
-    <p className="text-xl font-semibold text-center leading-tight mb-4">
-      <span className="text-red-600 font-bold">Trop de leads.</span>
-      <span className="text-gray-800"> Pas assez de temps. Et des ventes qui s'envolent.</span>
+    <p className="text-red-600 text-xl font-bold text-center leading-tight mb-4">
+      Trop de leads. Pas assez de temps. Et des ventes qui s'envolent.
     </p>
   </div>
 )}
