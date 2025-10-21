@@ -47,10 +47,10 @@ export const ResultSection = () => {
   }, [showStats, targetConversions, targetAppointments]);
 
   return (
-    <div className="relative w-full h-full bg-gradient-to-br from-primary to-secondary flex flex-col items-center justify-center p-8">
+    <div className="relative w-full h-full bg-gradient-to-br from-primary to-secondary flex flex-col items-center justify-center p-4">
       {/* Logo */}
-      <div className="absolute top-6 left-1/2 -translate-x-1/2">
-        <img src={logoFull} alt="Axiiz" className="h-8 w-auto" />
+      <div className="absolute top-4 left-1/2 -translate-x-1/2">
+        <img src={logoFull} alt="Axiiz" className="h-6 w-auto" />
       </div>
 
       {/* Glowing WhatsApp Icon Background */}
@@ -59,37 +59,37 @@ export const ResultSection = () => {
       </div>
 
       {showStats && (
-        <div className="relative z-10 space-y-8 w-full animate-fade-in mt-16">
+        <div className="relative z-10 space-y-4 w-full animate-fade-in mt-12">
           {/* Title */}
-          <h2 className="text-white text-3xl font-bold text-center mb-8">{videoContent.result.title}</h2>
+          <h2 className="text-white text-2xl font-bold text-center mb-4">{videoContent.result.title}</h2>
 
           {/* Stats Cards */}
-          <div className="space-y-6">
+          <div className="space-y-3">
             {/* Conversions */}
-            <div className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-2xl animate-counter">
-              <div className="flex items-center justify-between mb-2">
-                <TrendingUp className="w-8 h-8 text-primary" />
-                <span className="text-5xl font-bold text-primary">{videoContent.result.stats[0].prefix}{conversions}{videoContent.result.stats[0].suffix}</span>
+            <div className="bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-2xl animate-counter">
+              <div className="flex items-center justify-between mb-1">
+                <TrendingUp className="w-6 h-6 text-primary" />
+                <span className="text-4xl font-bold text-primary">{videoContent.result.stats[0].prefix}{conversions}{videoContent.result.stats[0].suffix}</span>
               </div>
-              <p className="text-gray-700 font-semibold text-lg">{videoContent.result.stats[0].label}</p>
+              <p className="text-gray-700 font-semibold text-base">{videoContent.result.stats[0].label}</p>
             </div>
 
             {/* Zero Leads Lost */}
-            <div className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-2xl animate-counter delay-100">
-              <div className="flex items-center justify-between mb-2">
-                <Check className="w-8 h-8 text-primary" />
-                <span className="text-5xl font-bold text-primary">{videoContent.result.stats[1].value}</span>
+            <div className="bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-2xl animate-counter delay-100">
+              <div className="flex items-center justify-between mb-1">
+                <Check className="w-6 h-6 text-primary" />
+                <span className="text-4xl font-bold text-primary">{videoContent.result.stats[1].value}</span>
               </div>
-              <p className="text-gray-700 font-semibold text-lg">{videoContent.result.stats[1].label}</p>
+              <p className="text-gray-700 font-semibold text-base">{videoContent.result.stats[1].label}</p>
             </div>
 
             {/* Automated Appointments */}
-            <div className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-2xl animate-counter delay-200">
-              <div className="flex items-center justify-between mb-2">
-                <Clock className="w-8 h-8 text-primary" />
-                <span className="text-5xl font-bold text-primary">{videoContent.result.stats[2].prefix}{appointments}{videoContent.result.stats[2].suffix}</span>
+            <div className="bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-2xl animate-counter delay-200">
+              <div className="flex items-center justify-between mb-1">
+                <Clock className="w-6 h-6 text-primary" />
+                <span className="text-4xl font-bold text-primary">{videoContent.result.stats[2].prefix}{appointments}{videoContent.result.stats[2].suffix}</span>
               </div>
-              <p className="text-gray-700 font-semibold text-lg">{videoContent.result.stats[2].label}</p>
+              <p className="text-gray-700 font-semibold text-base">{videoContent.result.stats[2].label}</p>
             </div>
           </div>
         </div>
