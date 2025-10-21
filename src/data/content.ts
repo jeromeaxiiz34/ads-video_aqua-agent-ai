@@ -20,18 +20,18 @@ export const videoContent = {
       status: "En ligne"
     },
     conversation: [
-      { id: 1, text: "Bonjour, je cherche un prêt immobilier.", isBot: false, delay: 500 },
-      { id: 2, text: "Bonjour 👋 Je peux vous aider ! Vous achetez une résidence principale ou un investissement ?", isBot: true, delay: 1800 },
-      { id: 3, text: "Résidence principale.", isBot: false, delay: 3600 },
-      { id: 4, text: "Très bien 👍 Vous êtes en CDI ou indépendant ?", isBot: true, delay: 4600 },
-      { id: 5, text: "CDI depuis 3 ans.", isBot: false, delay: 5600 },
-      { id: 6, text: "Parfait. Je peux vous proposer un rendez-vous pour étudier votre dossier.", isBot: true, delay: 6600 },
-      { id: 7, text: "Oui, je veux bien.", isBot: false, delay: 7600 },
-      { id: 8, text: "Voici le lien pour choisir votre créneau 👇", isBot: true, delay: 8800 },
-      { id: 9, text: "https://calendly.com/30min", isBot: true, delay: 9200 },
-      { id: 10, text: "Merci, je viens de réserver pour demain matin.", isBot: false, delay: 10400 },
-      { id: 11, text: "Parfait ✅ Rendez-vous confirmé. Vous recevrez un rappel automatique avant l’appel.", isBot: true, delay: 11600 },
-      { id: 12, text: "Merci et à demain.", isBot: false, delay: 14000 }
+      { id: 1, text: "Bonjour Kevin 👋 Vous aviez fait une demande de prêt immobilier sur notre site ?", isBot: true, delay: 500 },
+      { id: 2, text: "Oui, tout à fait.", isBot: false, delay: 1800 },
+      { id: 3, text: "Super 👍 Vous cherchez pour une résidence principale ou un investissement locatif ?", isBot: true, delay: 3600 },
+      { id: 4, text: "Résidence principale.", isBot: false, delay: 4600 },
+      { id: 5, text: "Parfait. Vous êtes en CDI ou indépendant ?", isBot: true, delay: 5600 },
+      { id: 6, text: "CDI depuis 3 ans.", isBot: false, delay: 6600 },
+      { id: 7, text: "Très bien. Je peux vous proposer un rendez-vous pour étudier votre dossier.", isBot: true, delay: 7600 },
+      { id: 8, text: "Oui, je veux bien.", isBot: false, delay: 8600 },
+      { id: 9, text: "Voici le lien pour choisir votre créneau 👇", isBot: true, delay: 9600 },
+      { id: 10, text: "https://calendly.com/30min", isBot: true, delay: 10000 },
+      { id: 11, text: "Merci, c’est réservé pour demain matin.", isBot: false, delay: 11000 },
+      { id: 12, text: "Parfait ✅ Rendez-vous confirmé. Vous recevrez un rappel automatique avant l’appel.", isBot: true, delay: 12000 }
     ],
     features: [
       { icon: "Zap", text: "Réponse instantanée ⚡", color: "primary" },
