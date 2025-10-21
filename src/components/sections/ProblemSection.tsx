@@ -64,11 +64,9 @@ export const ProblemSection = () => {
 {/* Problem Text */}
 {showText && (
   <div className="animate-slide-up">
-    <p className="text-gray-800 text-xl font-semibold text-center leading-tight mb-4">
-      {videoContent.problem.subtitle.split('…')[0]}…
-      <span className="text-red-600 font-bold">
-        {videoContent.problem.subtitle.split('…')[1]}
-      </span>
+    <p className="text-xl font-semibold text-center leading-tight mb-4">
+      <span className="text-red-600 font-bold">Trop de leads.</span>
+      <span className="text-gray-800"> Pas assez de temps. Et des ventes qui s'envolent.</span>
     </p>
   </div>
 )}
