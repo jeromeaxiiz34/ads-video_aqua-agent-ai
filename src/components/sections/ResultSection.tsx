@@ -61,7 +61,7 @@ export const ResultSection = () => {
       {showStats && (
         <div className="relative z-10 space-y-4 w-full animate-fade-in mt-6">
           {/* Title */}
-          <h2 className="text-white text-2xl font-bold text-center mb-8">{videoContent.result.title}</h2>
+          <h1 className="text-white text-2xl font-bold text-center mb-8">{videoContent.result.title}</h1>
 
           {/* Stats Cards */}
           <div className="space-y-3">
